@@ -1,0 +1,26 @@
+geth --datadir D:/Ethereum/NUClass init D:/Ethereum/genesis.json
+
+geth --datadir D:/Ethereum/NUClass console 2>console.log
+
+>
+>admin.tabtab
+>admin.nodeInfo
+>personal.tabtab
+>personal.newAccount()
+>eth.tabtab
+>eth.blockNumber
+>exit
+
+# Instantiate the second node
+
+geth --datadir D:/Ethereum/NUClass-node2 init D:/Ethereum/genesis.json
+
+#geth --datadir D:/Ethereum/NUClass-node2 --port 30304 --authrpc.port 8552 --networkid 1234 console 2>console2.log // access denied
+geth --datadir D:/Ethereum/NUClass-node2 --port 30304 --authrpc.port 8552 --networkid 1234 --ipcdisable console 2>console2.log
+
+# for the first node add networkid
+
+geth --datadir D:/Ethereum/NUClass --networkid 1234 console 2>console.log
+
+
+
