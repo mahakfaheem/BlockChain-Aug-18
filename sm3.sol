@@ -8,10 +8,6 @@ contract Student {
     }
     stu st1;
 
-    function setValue(string memory _name, string memory _regn, string memory _gender, string memory _enlyear) public {
-        st1 = stu(_name, _regn, _gender, _enlyear);
-    }
-
     function setName(string memory _name) public {
         st1.name = _name;
     }
